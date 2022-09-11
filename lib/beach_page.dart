@@ -1,5 +1,5 @@
-import 'package:airbnb_clone/design.dart';
-import 'package:airbnb_clone/design_detail_page.dart';
+import 'package:airbnb_clone/beach.dart';
+import 'package:airbnb_clone/beach_detail_page.dart';
 import 'package:flutter/material.dart';
 
 class BeachPage extends StatefulWidget {
@@ -56,7 +56,10 @@ class _BeachPageState extends State<BeachPage> {
                   var ev = evlerListesi[indeks];
                   return GestureDetector(
                     onTap: () {
-                      //Navigator.push(context, MaterialPageRoute(builder: (context)=>BeachDetailPage(ev:ev)));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => BeachDetailPage(ev: ev)));
                     },
                     child: Padding(
                       padding: const EdgeInsets.only(
@@ -163,8 +166,15 @@ class _BeachPageState extends State<BeachPage> {
         child: FloatingActionButton.extended(
           onPressed: () {},
           backgroundColor: Colors.black,
-          icon: const Icon(Icons.map_sharp,color: Colors.white,size: 20,),
-          label: const Text('Map',style: TextStyle(fontSize: 15),),
+          icon: const Icon(
+            Icons.map_sharp,
+            color: Colors.white,
+            size: 20,
+          ),
+          label: const Text(
+            'Map',
+            style: TextStyle(fontSize: 15),
+          ),
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,

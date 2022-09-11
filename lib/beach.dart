@@ -7,7 +7,6 @@ class Beach {
   String tarih;
   double fiyat;
 
-
   Beach(
       {required this.houseId,
       required this.houseAdi,

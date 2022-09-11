@@ -1,4 +1,4 @@
-import 'package:airbnb_clone/pages/design_page.dart';
+import 'package:airbnb_clone/beach_page.dart';
 import 'package:airbnb_clone/pages/camp_page.dart';
 import 'package:airbnb_clone/pages/iconic_page.dart';
 import 'package:airbnb_clone/pages/islands_page.dart';
@@ -16,6 +16,7 @@ class Anasayfa extends StatefulWidget {
 class _AnasayfaState extends State<Anasayfa> {
   int chooseIndeks = 0;
 
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -30,20 +31,17 @@ class _AnasayfaState extends State<Anasayfa> {
             child: AppBar(
               backgroundColor: Colors.white,
               title: Container(
-
-
                 child: Center(
                   child: Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20),
-                    child: Container(
+                    child:  Container(
                       decoration: BoxDecoration(
-borderRadius: BorderRadius.circular(50),
+                        borderRadius: BorderRadius.circular(50),
                         boxShadow: [
                           BoxShadow(
                             color: Colors.grey.withOpacity(0.5),
                             spreadRadius: 1,
                             blurRadius: 5,
-
                           ),
                         ],
                       ),
@@ -54,8 +52,6 @@ borderRadius: BorderRadius.circular(50),
                               borderRadius: BorderRadius.circular(50),
                               side: BorderSide(color: Colors.white),
                             ),
-
-
                             height: 50.0,
                             color: Colors.white,
                             onPressed: () {},
@@ -68,15 +64,17 @@ borderRadius: BorderRadius.circular(50),
                                 Padding(
                                   padding: const EdgeInsets.only(left: 15),
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Text(
                                         "Where to?",
                                         style: TextStyle(color: Colors.black),
                                       ),
                                       Text("Anywhere · Any week · Add guests",
-                                          style:
-                                              TextStyle(color: Colors.black54,fontWeight: FontWeight.w400)),
+                                          style: TextStyle(
+                                              color: Colors.black54,
+                                              fontWeight: FontWeight.w400)),
                                     ],
                                   ),
                                 ),
@@ -85,12 +83,16 @@ borderRadius: BorderRadius.circular(50),
                                     height: 38,
                                     width: 38,
                                     decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(100),
+                                        borderRadius:
+                                            BorderRadius.circular(100),
                                         color: Colors.white,
-                                        border: Border.all(color: Colors.grey.withOpacity(0.5),width: 1.5)),
+                                        border: Border.all(
+                                            color: Colors.grey.withOpacity(0.5),
+                                            width: 1.5)),
                                     child: Icon(
                                       Icons.tune,
-                                      color: Colors.black,size: 20,
+                                      color: Colors.black,
+                                      size: 20,
                                     )),
                               ],
                             ),
@@ -101,19 +103,21 @@ borderRadius: BorderRadius.circular(50),
                   ),
                 ),
               ),
-              bottom: const TabBar(
+              bottom:  TabBar(
+
+
                 indicatorSize: TabBarIndicatorSize.label,
                 isScrollable: true,
                 labelColor: Colors.black,
                 unselectedLabelColor: Colors.black54,
                 indicatorColor: Colors.pink,
+
                 tabs: [
                   Padding(
                     padding: EdgeInsets.only(left: 15),
                     child: Tab(
                       icon: ImageIcon(
                         AssetImage("pictures/icon/iconic.jpg"),
-
                       ),
                       text: "Iconic",
                     ),
@@ -136,16 +140,16 @@ borderRadius: BorderRadius.circular(50),
                     ),
                     text: "Islands",
                   ),
-
-                    Tab(
-                      icon: ImageIcon(
-                        AssetImage("pictures/icon/tiny.jpg"),
-                      ),
-                      text: "Tiny homes",
-
+                  Tab(
+                    icon: ImageIcon(
+                      AssetImage("pictures/icon/tiny.jpg"),
+                    ),
+                    text: "Tiny homes",
                   ),
                 ],
               ),
+
+
             ),
           ),
           body: const TabBarView(children: [
@@ -155,10 +159,7 @@ borderRadius: BorderRadius.circular(50),
             TinyPage(),
             IslandsPage()
           ]),
-          bottomNavigationBar:
-
-          BottomNavigationBar(
-
+          bottomNavigationBar: BottomNavigationBar(
             items: const [
               BottomNavigationBarItem(
                   icon: ImageIcon(
